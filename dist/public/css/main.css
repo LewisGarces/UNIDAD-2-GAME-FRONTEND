@@ -1,5 +1,225 @@
 body{
-    background:url('../img/bg01.webp') fixed no-repeat 0 0;
+    background:url('../img/bg06.avif') fixed no-repeat 0 0;
     background-size: cover;
     background-position: center center;
+}
+/* Estilo para los botones */
+.btn {
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 8px 14px; /* Más pequeño */
+    font-size: 1rem; /* Más pequeño */
+    border-radius: 20px; /* Más redondeado */
+    transition: 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background-size: 200% 200%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Ajustado */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Degradados con efectos extremos */
+.btn-primary {
+    background: linear-gradient(45deg, #ff00ff, #6a00f4, #1e00ff);
+    animation: brillo 2s infinite alternate;
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00);
+    animation: fuego 1.5s infinite alternate;
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #00ff87, #00ff5e, #00ff00);
+    animation: energia 2s infinite alternate;
+}
+
+.btn-warning {
+    background: linear-gradient(45deg, #ffee00, #ffcc00, #ff9900);
+    color: black;
+    animation: dorado 2s infinite alternate;
+}
+
+/* Efecto de resplandor neón */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    background-position: 100% 100%;
+}
+
+/* Animaciones espectaculares */
+@keyframes brillo {
+    0% { box-shadow: 0 0 10px #ff00ff; }
+    100% { box-shadow: 0 0 30px #1e00ff; }
+}
+
+@keyframes fuego {
+    0% { box-shadow: 0 0 20px #ff0000; }
+    100% { box-shadow: 0 0 40px #ffff00; }
+}
+
+@keyframes energia {
+    0% { box-shadow: 0 0 15px #00ff87; }
+    100% { box-shadow: 0 0 35px #00ff00; }
+}
+
+@keyframes dorado {
+    0% { box-shadow: 0 0 15px #ffee00; }
+    100% { box-shadow: 0 0 35px #ff9900; }
+}
+
+/* Estilo para JUGADOR 1 */
+#player1 {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.8), rgba(255, 102, 102, 0.8));
+    padding: 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#player1:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+}
+
+#player1 h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: white; /* Color blanco para el título */
+}
+
+#player1 hr {
+    border-top: 3px solid white;
+    opacity: 0.8;
+}
+
+/* Estilo para los inputs */
+#player1 .form-floating .form-control {
+    border-radius: 15px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-weight: bold;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Desactivar el efecto de acercamiento al hacer clic */
+#player1 .form-floating .form-control:focus {
+    outline: none; /* Eliminar el contorno */
+    border-color: #ff0000; /* Color del borde en enfoque */
+    box-shadow: none; /* Sin sombra al enfocar */
+}
+
+#player1 .form-floating label {
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilo para JUGADOR 2 */
+#player2 {
+    background: linear-gradient(135deg, rgba(0, 0, 255, 0.8), rgba(102, 102, 255, 0.8));
+    padding: 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+    color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#player2:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.8);
+}
+
+#player2 h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: white; /* Color blanco para el título */
+}
+
+#player2 hr {
+    border-top: 3px solid white;
+    opacity: 0.8;
+}
+
+/* Estilo para los inputs */
+#player2 .form-floating .form-control {
+    border-radius: 15px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-weight: bold;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Desactivar el efecto de acercamiento al hacer clic */
+#player2 .form-floating .form-control:focus {
+    outline: none; /* Eliminar el contorno */
+    border-color: #0000ff; /* Color del borde en enfoque */
+    box-shadow: none; /* Sin sombra al enfocar */
+}
+
+#player2 .form-floating label {
+    color: white;
+    font-weight: bold;
+}
+/* Estilo para los títulos de los colores */
+.text-success, .text-info, .text-warning {
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra para mejorar la legibilidad */
+    color: white; /* Color de texto blanco */
+}
+
+/* Estilos para las barras de progreso */
+.progress {
+    height: 30px; /* Altura de la barra de progreso */
+    border-radius: 10px; /* Bordes redondeados */
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente para la barra */
+}
+
+/* Estilos para las barras de progreso con efecto neón */
+.progress-bar {
+    border-radius: 10px; /* Bordes redondeados para la barra */
+    font-weight: bold; /* Negrita en el texto de la barra */
+    transition: width 0.5s; /* Transición suave al cambiar el ancho */
+}
+
+/* Efecto de degradado oscuro para la barra de vida del Jugador 1 */
+#vida_py1 {
+    background: linear-gradient(45deg, #2aff00, #0f5800); /* Degradado más oscuro verde */
+    box-shadow: 0 0 10px #2aff00, 0 0 20px #0f5800; /* Efecto de resplandor */
+}
+
+/* Efecto de degradado oscuro para la barra de ki del Jugador 1 */
+#ki_py1 {
+    background: linear-gradient(45deg, #00bfff, #005757); /* Degradado más oscuro azul */
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #005757; /* Efecto de resplandor */
+}
+
+/* Efecto de degradado oscuro para la barra de energía del Jugador 1 */
+#energia_py1 {
+    background: linear-gradient(45deg, #ffd700, #7f7f00); /* Degradado más oscuro amarillo */
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #7f7f00; /* Efecto de resplandor */
+}
+
+/* Efecto de degradado oscuro para la barra de vida del Jugador 2 */
+#vida_py2 {
+    background: linear-gradient(45deg, #ff2f00, #5f0f00); /* Degradado más oscuro rojo */
+    box-shadow: 0 0 10px #ff2f00, 0 0 20px #5f0f00; /* Efecto de resplandor */
+}
+
+/* Efecto de degradado oscuro para la barra de ki del Jugador 2 */
+#ki_py2 {
+    background: linear-gradient(45deg, #ff00cc, #5f005f); /* Degradado más oscuro magenta */
+    box-shadow: 0 0 10px #ff00cc, 0 0 20px #5f005f; /* Efecto de resplandor */
+}
+
+/* Efecto de degradado oscuro para la barra de energía del Jugador 2 */
+#energia_py2 {
+    background: linear-gradient(45deg, #ffb300, #7f6f00); /* Degradado más oscuro dorado */
+    box-shadow: 0 0 10px #ffb300, 0 0 20px #7f6f00; /* Efecto de resplandor */
 }
